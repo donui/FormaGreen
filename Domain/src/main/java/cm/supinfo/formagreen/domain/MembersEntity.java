@@ -6,7 +6,10 @@
 package cm.supinfo.formagreen.domain;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -14,6 +17,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -21,6 +25,8 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import org.apache.commons.lang.Validate;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.Parameter;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.domain.Persistable;
@@ -79,12 +85,20 @@ public class MembersEntity implements Serializable, Persistable<Long> {
     @CreatedDate
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
-    
-     @ManyToOne(fetch = FetchType.LAZY)
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "account_typeId", nullable = false)
     private Account_typeEntity account_typeId;
 
+    @OneToMany(mappedBy = "membersId", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OnDelete(action = OnDeleteAction.CASCADE)
+    private final List<Green_areaEntity> Green_areaEntity;
 
+    public MembersEntity() {
+        this.Green_areaEntity = new ArrayList<>();
+    }
+
+    
     @Override
     public Long getId() {
         return Id;
