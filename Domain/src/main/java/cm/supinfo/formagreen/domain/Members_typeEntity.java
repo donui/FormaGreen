@@ -32,9 +32,9 @@ import org.springframework.data.domain.Persistable;
  *
  * @author ryank
  */
-@Entity(name = "Account_typeEntity")
-@Table(name = "account_type")
-public class Account_typeEntity implements Serializable, Persistable<Long> {
+@Entity(name = "Members_typeEntity")
+@Table(name = "members_type")
+public class Members_typeEntity implements Serializable, Persistable<Long> {
 
     @Id
     @Column(nullable = false, name = "id")
@@ -61,7 +61,7 @@ public class Account_typeEntity implements Serializable, Persistable<Long> {
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
 
-    @OneToMany(mappedBy = "account_typeId", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "members_typeId", cascade = CascadeType.ALL, orphanRemoval = true)
     @OnDelete(action = OnDeleteAction.CASCADE)
     private final List<MembersEntity> MembersEntity;
 
@@ -75,7 +75,7 @@ public class Account_typeEntity implements Serializable, Persistable<Long> {
         return Id == null;
     }
 
-    public Account_typeEntity() {
+    public Members_typeEntity() {
         this.MembersEntity = new ArrayList<>();
     }
 

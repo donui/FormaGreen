@@ -87,8 +87,8 @@ public class MembersEntity implements Serializable, Persistable<Long> {
     private Date creationDate;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "account_typeId", nullable = false)
-    private Account_typeEntity account_typeId;
+    @JoinColumn(name = "members_typeId", nullable = false)
+    private Members_typeEntity members_typeId;
 
     @OneToMany(mappedBy = "membersId", cascade = CascadeType.ALL, orphanRemoval = true)
     @OnDelete(action = OnDeleteAction.CASCADE)

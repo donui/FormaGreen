@@ -175,5 +175,6 @@
     <modules>
         <module>Application</module>
         <module>Domain</module>
+        <module>Repository</module>
     </modules>
 </project>
