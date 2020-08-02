@@ -67,7 +67,7 @@ public class Green_areaEntity implements Serializable, Persistable<Long> {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "green_area_typeId", nullable = false)
-    private Green_area_typeEntity type_green_areaId;
+    private Green_area_typeEntity green_area_typeId;
 
     @Override
     public Long getId() {
