@@ -14,7 +14,7 @@ import org.springframework.stereotype.Repository;
  * @author ryank
  */
 
-@Repository("MembersTypeInterface")
-public interface MembersTypeInterface extends JpaRepository<Members_typeEntity,Long>{
+@Repository("MembersTypeRepository")
+public interface MembersTypeRepository extends JpaRepository<Members_typeEntity,Long>{
     
 }

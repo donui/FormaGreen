@@ -7,7 +7,7 @@
     <packaging>pom</packaging>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-          <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
     
     <name>Forma Green</name>
@@ -136,6 +136,13 @@
             <scope>compile</scope>
         </dependency>
         
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.12</version>
+            <scope>provided</scope>
+        </dependency>
+        
     </dependencies>
 
     <build>
@@ -176,5 +183,6 @@
         <module>Application</module>
         <module>Domain</module>
         <module>Repository</module>
+        <module>Service</module>
     </modules>
 </project>

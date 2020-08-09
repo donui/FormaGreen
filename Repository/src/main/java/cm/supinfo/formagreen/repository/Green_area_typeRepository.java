@@ -15,6 +15,6 @@ import org.springframework.stereotype.Repository;
  */
 
 @Repository("Green_area_typeRepository")
-public interface Green_area_typeInterface extends JpaRepository<Green_area_typeEntity, Long> {
+public interface Green_area_typeRepository extends JpaRepository<Green_area_typeEntity, Long> {
     
 }

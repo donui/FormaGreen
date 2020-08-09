@@ -5,7 +5,8 @@
  */
 package cm.supinfo.formagreen.repository;
 
-import cm.supinfo.formagreen.domain.Green_areaEntity;
+
+import cm.supinfo.formagreen.domain.MembersEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -13,7 +14,8 @@ import org.springframework.stereotype.Repository;
  *
  * @author ryank
  */
-@Repository("Green_areaInterface")
-public interface Green_areaInterface extends JpaRepository<Green_areaEntity, Long> {
 
+@Repository("MembersRepository")
+public interface MembersRepository extends JpaRepository<MembersEntity, Long>{
+    
 }
