@@ -23,6 +23,8 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.commons.lang.Validate;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.OnDelete;
@@ -37,6 +39,8 @@ import org.springframework.data.domain.Persistable;
  */
 @Entity(name = "MembersEntity")
 @Table(name = "members")
+@Getter
+@Setter
 public class MembersEntity implements Serializable, Persistable<Long> {
 
     @Id
@@ -60,10 +64,10 @@ public class MembersEntity implements Serializable, Persistable<Long> {
     private String firstname;
 
     @Column(name = "age", nullable = false, unique = false)
-    private String age;
+    private int age;
 
     @Column(name = "sex", nullable = false, unique = false)
-    private Boolean sex;
+    private String sex;
 
     @Column(name = "email", nullable = false, unique = true)
     private String email;
@@ -98,7 +102,6 @@ public class MembersEntity implements Serializable, Persistable<Long> {
         this.Green_areaEntity = new ArrayList<>();
     }
 
-    
     @Override
     public Long getId() {
         return Id;
@@ -124,19 +127,19 @@ public class MembersEntity implements Serializable, Persistable<Long> {
         this.firstname = firstname;
     }
 
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 
-    public void setAge(String age) {
+    public void setAge(int age) {
         this.age = age;
     }
 
-    public Boolean getSex() {
+    public String getSex() {
         return sex;
     }
 
-    public void setSex(Boolean sex) {
+    public void setSex(String sex) {
         this.sex = sex;
     }
 

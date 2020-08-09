@@ -20,6 +20,8 @@ import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import lombok.Getter;
+import lombok.Setter;
 import org.apache.commons.lang.Validate;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.OnDelete;
@@ -34,6 +36,8 @@ import org.springframework.data.domain.Persistable;
  */
 @Entity(name = "type_green_areaEntity")
 @Table(name = "type_green_area")
+@Getter
+@Setter
 public class Green_area_typeEntity implements Serializable, Persistable<Long> {
 
     @Id

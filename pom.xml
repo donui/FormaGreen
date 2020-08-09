@@ -184,5 +184,7 @@
         <module>Domain</module>
         <module>Repository</module>
         <module>Service</module>
+        <module>Models</module>
+        <module>Controllers</module>
     </modules>
 </project>

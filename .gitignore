@@ -1,3 +1,6 @@
 /Application/target/
 /Domain/target/
 /Repository/target/
+/Service/target/
+/Models/target/
+/Controllers/target/

@@ -79,6 +79,30 @@ public class Members_typeEntity implements Serializable, Persistable<Long> {
         this.MembersEntity = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
     @PrePersist
     @PreUpdate
     protected void prePersistAndPreUpdate() {

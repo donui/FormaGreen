@@ -5,9 +5,14 @@
  */
 package cm.supinfo.formagreen.service;
 
+import cm.supinfo.formagreen.models.GreenAreaModels;
+import cm.supinfo.formagreen.models.GreenAreaTypeModels;
+import cm.supinfo.formagreen.models.MembersModels;
+import cm.supinfo.formagreen.models.MembersTypeModels;
 import cm.supinfo.formagreen.repository.*;
 import dtoassembler.DtoToEntity;
 import dtoassembler.EntityToDto;
+import java.util.List;
 import javax.annotation.PostConstruct;
 import org.apache.commons.lang.Validate;
 import org.slf4j.Logger;
@@ -59,6 +64,76 @@ public class FormaGreenServiceImpl implements FormaGreenService {
         Validate.notNull(entityToDto, "entityToDto must not be null");
         Validate.notNull(dtoToEntity, "dtoToEntity must not be null");
         log.info(getClass().getSimpleName() + " successfully initialized");
+    }
+
+    @Override
+    public void createMembers(MembersModels members) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateMembers(MembersModels members) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void deleteMembers(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<MembersModels> getMembers() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public List<MembersModels> scanQrCode(String matricule) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void createMembersType(MembersTypeModels type) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateMembersType(MembersTypeModels type) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean checkSubscribeValidityDate(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void createGreenArea(GreenAreaModels greenArea) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void deleteGreenArea(GreenAreaModels greenArea) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateGreenArea(GreenAreaModels greenArea) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void createGreenAreaType(GreenAreaTypeModels greenAreaType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void deleteGreenAreaType(GreenAreaTypeModels greenAreaType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void updateGreenAreaType(GreenAreaTypeModels greenAreaType) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
